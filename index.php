@@ -83,8 +83,37 @@
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
+    <div class="popup flex">
+        <div class="popup__main">
+            <div class="popup__titleBlock flex">
+                <h2 class="popup__title">Регистрация</h2>
+                <button class="popup__close">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.0014 0L8 6L2 0L0 2L6 8L0 14L2 16L8 10L14.0014 16L16.0014 14L10.0014 8L16.0014 2L14.0014 0Z"/>
+                    </svg>
+                </button>
+            </div>
+            <form class="popup__form flex" action="
+            form.php" method="post">
+                <div class="popup__inputBlock flex">
+                    <input class="popup__input" type="text" minlength="2" id="name" for="name" name="name" placeholder="Имя" autocomplete="off" required>
+                    <input class="popup__input" type="text" minlength="2" id="company" for="company" name="company" placeholder="Сайт компании" autocomplete="off" required>
+                    <input class="popup__input" type="tel" id="tel" name="tel" autocomplete="off" placeholder="Телефон" required>
+                </div>
+                <button class="popup__btn flex">Получить код</button>
+                <label class="popup__checkBlock checkBlock flex">
+                    <input class="checkBlock__check" type="checkbox" required>
+                    <span class="checkBlock__checkVis flex" role="checkbox" aria-checked="true" aria-label="checkbox"></span>
+                    <span class="checkBlock__descr">
+                    Отправляя сведения через электронную форму, вы даете согласие на обработку персональных данных, в том числе сбор, хранение и передачу третьим лицам представленной вами информации на условиях <a class="checkBlock__policy" href="#">Политики обработки персональных данных.</a>
+                    </span>
+                </label>
+            </form>
+        </div>
+    </div>
+    <script src="https://unpkg.com/imask"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
