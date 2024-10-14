@@ -5,25 +5,26 @@
 @import "mixins";
 
 .container {
-  padding-inline: max(2.78vw, 40px);
+  padding-inline: min(2.78vw, 40px);
 }
 
 .hero {
+  position: relative;
   overflow: hidden;
 
   &__container {
     @include img;
     position: relative;
-    min-height: max(74.58vw, 1074px);
+    min-height: min(74.58vw, 1074px);
     background-image: url(../img/back.jpg);
   }
 
   &__star {
     position: absolute;
-    top: max(4.24vw, 61px);
-    right: max(7.15vw, 103px);
-    width: max(20.49vw, 295px);
-    height: max(22.78vw, 328px);
+    top: min(4.24vw, 61px);
+    right: min(7.15vw, 103px);
+    width: min(20.49vw, 295px);
+    height: min(22.78vw, 328px);
   }
 
   &__starImg {
@@ -34,22 +35,37 @@
   }
 
   &__title {
-    margin-left: max(2.78vw, 40px);
-    padding-top: max(17.22vw, 248px);
-    font-size: max(11.11vw, 160px);
+    position: relative;
+    margin-bottom: min(1.46vw, 21px);
+    margin-left: min(2.78vw, 40px);
+    padding-top: min(17.22vw, 248px);
+    font-size: min(11.11vw, 160px);
     font-weight: 900;
-    line-height: max(12.22vw, 176px);
+    line-height: min(12.22vw, 176px);
     letter-spacing: .03em;
     text-transform: uppercase;
+
+    &::after {
+      @include img;
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: min(1.74vw, 25px);
+      left: min(7.64vw, 110px);
+      width: min(1.32vw, 19px);
+      height: min(1.94vw, 28px);
+      background-image: url(../img/ellipse.png);
+      transform: rotate(38deg);
+    }
   }
 
   &__titleBlack {
     position: relative;
     display: block;
     width: max-content;
-    margin-bottom: max(1.74vw, 25px);
+    margin-bottom: min(1.74vw, 25px);
     color: rgba(255, 255, 255, 1);
-    transform: rotate(7deg) translateY(min(-.90vw, -13px));
+    transform: rotate(7deg) translateY(max(-.90vw, -13px));
 
     &::after,
     &::before {
@@ -60,18 +76,18 @@
     }
 
     &::after {
-      right: max(3.89vw, 56px);
-      bottom: max(10.14vw, 146px);
-      height: max(26.18vw, 377px);
+      right: min(3.89vw, 56px);
+      bottom: min(10.14vw, 146px);
+      height: min(26.18vw, 377px);
       border-radius: 2px;
       background-color: rgba(143, 143, 255, 1);
       transform: rotate(-7deg);
     }
 
     &::before {
-      bottom: max(10.00vw, 144px);
-      left: min(-.63vw, -9px);
-      height: max(26.39vw, 380px);
+      bottom: min(10.00vw, 144px);
+      left: max(-.63vw, -9px);
+      height: min(26.39vw, 380px);
       border-radius: 2px;
       background-color: rgba(254, 100, 250, 1);
       transform: rotate(-7deg);
@@ -81,32 +97,139 @@
   &__ellipse {
     position: absolute;
     z-index: 10;
-    width: max(.42vw, 6px);
-    height: max(.42vw, 6px);
+    width: min(.42vw, 6px);
+    height: min(.42vw, 6px);
     border-radius: 100%;
     background-color: rgba(21, 21, 21, 1);
 
     &_two {
-      right: max(2.15vw, 31px);
-      bottom: max(10.00vw, 144px);
+      right: min(2.15vw, 31px);
+      bottom: min(10.00vw, 144px);
     }
 
     &_one {
-      bottom: max(9.93vw, 143px);
-      left: max(0.83vw, 12px);
+      bottom: min(9.93vw, 143px);
+      left: min(.83vw, 12px);
     }
   }
 
   &__titleFriday {
+    position: relative;
+    z-index: 1000;
     display: block;
     color: rgba(254, 100, 250, 1);
+  }
+
+  &__sale {
+    @include img;
+    position: absolute;
+    z-index: 1000;
+    bottom: max(-6.25vw, -90px);
+    left: max(-3.26vw, -47px);
+    width: min(13.13vw, 189px);
+    height: min(9.58vw, 138px);
+    background-image: url(../img/sale.png);
+  }
+
+  &__descr {
+    font-family: "Suisse";
+    font-size: min(1.25vw, 18px);
+    font-weight: 600;
+    line-height: min(1.88vw, 27px);
+    color: rgba(224, 234, 255, 1);
+  }
+
+  &__btnBlock {
+    flex-direction: column;
+    max-width: min(29.51vw, 425px);
+    margin-left: min(17.85vw, 257px);
+
+    row-gap: min(2.22vw, 32px);
+  }
+
+  &__btn {
+    z-index: 999;
+    align-items: center;
+    justify-content: space-between;
+    width: min(22.22vw, 320px);
+    padding: min(1.11vw, 16px) min(1.67vw, 24px);
+    border: 1px solid transparent;
+    border-radius: min(1.11vw, 16px);
+    font-size: min(1.11vw, 16px);
+    font-weight: 500;
+    line-height: min(1.39vw, 20px);
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(143, 143, 255, 1);
+    transition: border-color .3s ease-in-out,  background-color .3s ease-in-out;
+
+    column-gap: min(.83vw, 12px);
+  }
+
+  &__lineBlock {
+    position: absolute;
+    bottom: min(17.36vw, 250px);
+    left: 0;
+  }
+
+  &__line {
+    position: absolute;
+    align-items: center;
+    width: max-content;
+    border-top: 1px solid rgba(50, 50, 50, 1);
+    background-color: rgba(29, 29, 29, .1);
+
+    padding-block: min(1.04vw, 15px);
+    backdrop-filter: blur(5px);
+    column-gap: min(1.46vw, 21px);
+
+    &_top {
+      z-index: 10;
+      top: max(-5.56vw, -80px);
+      left: max(-12.50vw, -180px);
+      transform: rotate(-12deg);
+    }
+
+    &_bottom {
+      z-index: 9;
+      top: 0;
+      left: max(-18.26vw, -263px);
+      transform: rotate(-5deg);
+    }
+  }
+
+  &__lineStar {
+    @include img;
+    width: min(4.17vw, 60px);
+    height: min(4.17vw, 60px);
+
+    &_top {
+      background-image: url(../img/star_pink.svg);
+    }
+
+    &_bottom {
+      background-image: url(../img/star_yellow.svg);
+    }
+  }
+
+  &__lineTxt {
+    @include img;
+    width: min(36.32vw, 523px);
+    height: min(3.33vw, 48px);
+
+    &_top {
+      background-image: url(../img/line_pink.svg);
+    }
+
+    &_bottom {
+      background-image: url(../img/line_yellow.svg);
+    }
   }
 }
 
 .header {
   position: fixed;
-  z-index: 1000;
-  top: max(2.78vw, 40px);
+  z-index: 9999;
+  top: min(2.78vw, 40px);
   right: 0;
   left: 0;
 
@@ -115,20 +238,20 @@
     justify-content: space-between;
     border: 1px solid transparent;
     border-color: rgba(171, 171, 171, .2);
-    border-radius: max(1.67vw, 24px);
+    border-radius: min(1.67vw, 24px);
     box-shadow: 14.22px 75px 90px 0 rgba(194, 194, 194, .05) inset,
     0 65px 130px -5.08px rgba(0, 0, 0, .05);
 
-    column-gap: max(.69vw, 10px);
-    padding-inline: max(2.78vw, 40px);
-    padding-block: max(1.25vw, 18px);
+    column-gap: min(.69vw, 10px);
+    padding-inline: min(2.78vw, 40px);
+    padding-block: min(1.25vw, 18px);
     backdrop-filter: blur(10px);
   }
 
   &__logo {
     display: block;
-    width: max(7.78vw, 112px);
-    height: max(3.33vw, 48px);
+    width: min(7.78vw, 112px);
+    height: min(3.33vw, 48px);
   }
 
   &__logoImg {
@@ -142,14 +265,14 @@
     flex-wrap: wrap;
     max-width: 50%;
 
-    column-gap: max(2.78vw, 40px);
+    column-gap: min(2.78vw, 40px);
   }
 
   &__btn {
-    padding: max(.56vw, 8px);
-    font-size: max(1.25vw, 18px);
+    padding: min(.56vw, 8px);
+    font-size: min(1.25vw, 18px);
     font-weight: 500;
-    line-height: max(1.39vw, 20px);
+    line-height: min(1.39vw, 20px);
 
     &_offer {
       color: rgba(143, 143, 255, 1);
@@ -158,6 +281,18 @@
     &_price {
       color: rgba(224, 234, 255, 1);
     }
+  }
+}
+
+@media ((hover: hover) and (pointer: fine)) {
+  .hero__btn:hover {
+    border-color: rgba(143, 143, 255, 1);
+    background-color: rgba(163, 163, 255, 1);
+  }
+
+  .hero__btn:active {
+    border-color: rgba(143, 143, 255, 1);
+    background-color: rgba(100, 100, 255, 1);
   }
 }
 
