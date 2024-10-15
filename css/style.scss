@@ -224,6 +224,10 @@
       background-image: url(../img/line_yellow.svg);
     }
   }
+
+  &__disclamer {
+    display: none;
+  }
 }
 
 .header {
@@ -285,7 +289,7 @@
 }
 
 .popup {
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   display: none;
   align-items: center;

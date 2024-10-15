@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $company = trim($_POST['company'] ?? '');
     $tel = trim($_POST['tel'] ?? '');
 
-    $logEntry = date('Y-m-d H:i:s') . " | Имя: $name | Компания: $company | Телефон: $tel";
+    $logEntry = " " . date('Y-m-d H:i:s') . " | Имя: $name | Компания: $company | Телефон: $tel";
 
     if (file_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX) === false) {
         die("Ошибка записи в файл.");

@@ -82,6 +82,9 @@
                         <span class="hero__lineTxt hero__lineTxt_bottom"></span>
                     </div>
                 </div>
+                <p class="hero__disclamer">
+                    *Акция не распространяется на подключение опций, лимитов, которые были подключены ранее до 1.11.2023 Количество предложений ограничено
+                </p>
             </div>
         </section>
     </main>

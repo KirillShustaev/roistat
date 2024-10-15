@@ -660,6 +660,9 @@ input[type=search]::-webkit-search-results-decoration {
 .hero__lineTxt_bottom {
   background-image: url(../img/line_yellow.svg);
 }
+.hero__disclamer {
+  display: none;
+}
 
 .header {
   position: fixed;
@@ -713,7 +716,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .popup {
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   display: none;
   align-items: center;
