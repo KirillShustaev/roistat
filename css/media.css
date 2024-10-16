@@ -424,6 +424,7 @@
   }
   .header__btn {
     font-size: 18px;
+    text-align: center;
     line-height: 28px;
   }
   .burger {
