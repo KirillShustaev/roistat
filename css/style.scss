@@ -452,6 +452,32 @@
   }
 }
 
+.burger {
+  position: relative;
+  display: none;
+  width: max(8.89vw, 32px);
+  height: max(2.78vw, 10px);
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 2px;
+    background-color: rgba(224, 234, 255, 1);
+  }
+
+  &::after {
+    top: 0;
+    width: 100%;
+  }
+
+  &::before {
+    bottom: 0;
+    width: 50%;
+  }
+}
+
 .checkBlock__check:checked + .checkBlock__checkVis::after {
   opacity: 1;
 }

@@ -13,7 +13,7 @@
             <div class="header__main flex">
                 <a href="#" class="header__logo">
                     <picture>
-                    <img class="header__logoImg" class="hero__starImg" src="./img/logo.png"
+                        <img class="header__logoImg" class="hero__starImg" src="./img/logo.png"
                         srcset="
                         ./img/logo_2x.png 2x,
                         ./img/logo_3x.png 3x
@@ -25,6 +25,7 @@
                     <button class="header__btn header__btn_offer">Наши предложения</button>
                     <button class="header__btn header__btn_price">Цены</button>
                 </div>
+                <button aria-label="Открыть меню" class="header__burger burger"></button>
             </div>
         </div>
     </header>

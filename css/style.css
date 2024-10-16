@@ -871,6 +871,28 @@ input[type=search]::-webkit-search-results-decoration {
   transition: opacity 0.3s ease-in-out;
 }
 
+.burger {
+  position: relative;
+  display: none;
+  width: max(8.89vw, 32px);
+  height: max(2.78vw, 10px);
+}
+.burger::after, .burger::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 2px;
+  background-color: rgb(224, 234, 255);
+}
+.burger::after {
+  top: 0;
+  width: 100%;
+}
+.burger::before {
+  bottom: 0;
+  width: 50%;
+}
+
 .checkBlock__check:checked + .checkBlock__checkVis::after {
   opacity: 1;
 }

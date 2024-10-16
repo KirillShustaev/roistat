@@ -240,4 +240,124 @@
     -moz-column-gap: min(6.38vw, 49px);
          column-gap: min(6.38vw, 49px);
   }
+}
+@media (max-width: 576px) {
+  .container {
+    padding-inline: max(5.56vw, 20px);
+  }
+  .hero__container {
+    min-height: max(232.78vw, 838px);
+    background-image: url(../img/back_360.jpg);
+  }
+  .hero__title {
+    margin-bottom: max(17.22vw, 62px);
+    padding-top: max(43.61vw, 157px);
+    font-size: max(12.78vw, 46px);
+    line-height: max(13.89vw, 50px);
+    letter-spacing: 0.03em;
+  }
+  .hero__title::after {
+    bottom: max(1.67vw, 6px);
+    left: max(55.28vw, 199px);
+    width: max(3.61vw, 13px);
+    height: max(2.5vw, 9px);
+    transform: rotate(27deg);
+  }
+  .hero__titleBlack {
+    margin-bottom: max(8.06vw, 29px);
+    transform: rotate(12deg);
+  }
+  .hero__titleBlack::after {
+    right: max(12.22vw, 44px);
+    width: 2px;
+    height: max(95.56vw, 344px);
+    transform: rotate(-12deg);
+  }
+  .hero__titleBlack::before {
+    left: min(-8.61vw, -31px);
+    width: 2px;
+    height: max(95.56vw, 344px);
+    transform: rotate(-12deg);
+  }
+  .hero__ellipse {
+    width: max(1.67vw, 6px);
+    height: max(1.67vw, 6px);
+  }
+  .hero__star {
+    top: max(16.67vw, 60px);
+    right: min(-5.56vw, -20px);
+    width: max(36.11vw, 130px);
+    height: max(36.11vw, 130px);
+    transform: rotate(-52deg);
+  }
+  .hero__descr {
+    font-size: max(4.44vw, 16px);
+    line-height: max(6.67vw, 24px);
+  }
+  .hero__btnBlock {
+    max-width: 100%;
+    margin-left: 0;
+    row-gap: max(6.67vw, 24px);
+  }
+  .hero__btn {
+    width: 100%;
+    margin-bottom: max(4.17vw, 15px);
+    padding: max(4.44vw, 16px) max(5vw, 18px) max(4.44vw, 16px) max(6.67vw, 24px);
+    border-radius: max(4.44vw, 16px);
+    font-size: max(4.44vw, 16px);
+    line-height: max(5.56vw, 20px);
+  }
+  .hero__disclamer {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    max-width: 100%;
+    font-size: max(3.61vw, 13px);
+    line-height: max(4.72vw, 17px);
+  }
+  .hero__sale {
+    bottom: min(-20.56vw, -74px);
+    left: max(30.56vw, 110px);
+    width: max(28.61vw, 103px);
+    height: max(32.78vw, 118px);
+    transform: rotate(7deg);
+  }
+  .hero__lineBlock {
+    bottom: max(90.56vw, 326px);
+  }
+  .hero__line {
+    padding-block: max(2.22vw, 8px);
+  }
+  .hero__line_top {
+    left: min(-56.94vw, -205px);
+  }
+  .hero__line_bottom {
+    top: max(25.56vw, 92px);
+    left: min(-3.61vw, -13px);
+  }
+  .hero__lineTxt {
+    width: max(143.61vw, 517px);
+    height: max(19.44vw, 70px);
+  }
+  .hero__lineStar_bottom {
+    width: max(21.11vw, 76px);
+    height: max(15.28vw, 55px);
+  }
+  .header {
+    top: max(5.56vw, 20px);
+  }
+  .header__main {
+    padding-inline: max(4.44vw, 16px);
+    padding-block: max(7.5vw, 27px);
+  }
+  .header__logo {
+    width: max(23.61vw, 85px);
+    height: max(6.94vw, 25px);
+  }
+  .header__btnBlock {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
 }/*# sourceMappingURL=media.css.map */
