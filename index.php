@@ -22,8 +22,8 @@
                     </picture>
                 </a>
                 <div class="header__btnBlock flex">
-                    <button class="header__btn header__btn_offer">Наши предложения</button>
-                    <button class="header__btn header__btn_price">Цены</button>
+                    <a href="#" class="header__btn header__btn_active">Наши предложения</a>
+                    <a href="#" class="header__btn">Цены</a>
                 </div>
                 <button aria-label="Открыть меню" class="header__burger burger"></button>
             </div>
